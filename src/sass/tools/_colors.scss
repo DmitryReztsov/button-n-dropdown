@@ -1,0 +1,23 @@
+$gray: #f5f5f5;
+$dark-gray: darken($gray, 10%);
+$very-dark-gray: darken($gray, 30%);
+
+$danger: #ff5252;
+$light-danger: lighten($danger, 5%);
+$very-light-danger: lighten($danger, 10%);
+$mega-light-danger: lighten($danger, 20%);
+$ultra-light-danger: lighten($danger, 30%);
+
+$success: #4caf50;
+$light-success: lighten($success, 5%);
+$very-light-success: lighten($success, 10%);
+$mega-light-success: lighten($success, 20%);
+$ultra-light-success: lighten($success, 30%);
+
+$warning: #fb8c00;
+$light-warning: lighten($warning, 5%);
+$very-light-warning: lighten($warning, 10%);
+$mega-light-warning: lighten($warning, 20%);
+$ultra-light-warning: lighten($warning, 30%);
+
+$white: #ffffff;

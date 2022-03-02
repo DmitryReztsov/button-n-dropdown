@@ -1,0 +1,29 @@
+@use '/src/sass/tools' as *;
+
+.dropdown {
+  min-width: 121px;
+  position: relative;
+
+  &__button {
+    width: 100%;
+  }
+
+  &__menu {
+    min-width: 121px;
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    padding: 8px 0px;
+    border-radius: 4px;
+    contain: content;
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+    li {
+      @include flex(_,center,_);
+      padding: 0px 16px;
+      min-width: 64px;
+      height: 36px;
+    }
+  }
+}

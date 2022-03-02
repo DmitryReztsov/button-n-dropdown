@@ -1,0 +1,199 @@
+@use '/src/sass/tools' as *;
+
+.button {
+  position: relative;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  letter-spacing: 1.25px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  cursor: pointer;
+  @include transition(0.2s, 0s);
+
+  &:active {
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+  }
+
+  &_primary {
+    background-color: $gray;
+    border: 1px solid transparent;
+    @include transition(0.2s, 0s);
+
+    &:hover,focus {
+      background-color: $dark-gray;
+    }
+    &:active {
+      background-color: $very-dark-gray;
+    }
+  }
+
+  &_danger {
+    border: 1px solid $danger;
+    background-color: $danger;
+    @include transition(0.2s, 0s);
+    color: $white;
+
+    &:hover,focus {
+      background-color: $light-danger;
+    }
+    &:active {
+      background-color: $very-light-danger;
+    }
+  }
+
+  &_success {
+    border: 1px solid $success;
+    background-color: $success;
+    @include transition(0.2s, 0s);
+    color: $white;
+
+    &:hover,focus {
+      background-color: $light-success;
+    }
+    &:active {
+      background-color: $very-light-success;
+    }
+  }
+
+  &_warning {
+    border: 1px solid $warning;
+    background-color: $warning;
+    @include transition(0.2s, 0s);
+    color: $white;
+
+    &:hover,focus {
+      background-color: $light-warning;
+    }
+    &:active {
+      background-color: $very-light-warning;
+    }
+  }
+
+  &_disabled {
+    color: $very-dark-gray;
+    background-color: $dark-gray;
+    cursor: inherit;
+    box-shadow: none;
+    border: 1px solid transparent;
+    &:active {
+      background-color: $dark-gray;
+    }
+  }
+
+  &_min {
+    height: 28px;
+    min-width: 50px;
+    padding: 0 12.4px;
+    font-size: 0.75rem;
+  }
+
+  &_large {
+    height: 44px;
+    min-width: 78px;
+    padding: 0 19.5555555556px;
+  }
+
+  &_block {
+    width: 100%;
+  }
+
+  &_outlined {
+    background-color: transparent;
+    box-shadow: none;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &.button_primary {
+      border: 1px solid $very-dark-gray;
+    }
+    &.button_danger {
+      color: $danger;
+      &:hover,focus {
+        background-color: $ultra-light-danger;
+      }
+      &:active {
+        background-color: $mega-light-danger;
+      }
+    }
+    &.button_success {
+      color: $success;
+      &:hover,focus {
+        background-color: $ultra-light-success;
+      }
+      &:active {
+        background-color: $mega-light-success;
+      }
+    }
+    &.button_warning {
+      color: $warning;
+      &:hover,focus {
+        background-color: $ultra-light-warning;
+      }
+      &:active {
+        background-color: $mega-light-warning;
+      }
+    }
+  }
+
+  &_text {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    &:active {
+      box-shadow: none;
+    }
+
+    &.button_danger {
+      color: $danger;
+      &:hover,focus {
+        background-color: $ultra-light-danger;
+      }
+      &:active {
+        background-color: $mega-light-danger;
+      }
+    }
+    &.button_success {
+      color: $success;
+      &:hover,focus {
+        background-color: $ultra-light-success;
+      }
+      &:active {
+        background-color: $mega-light-success;
+      }
+    }
+    &.button_warning {
+      color: $warning;
+      &:hover,focus {
+        background-color: $ultra-light-warning;
+      }
+      &:active {
+        background-color: $mega-light-warning;
+      }
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    border: 2px solid $gray;
+    border-top: 2px solid $very-dark-gray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 2s linear infinite;
+  }
+}
+
+.children_hide {
+  color: transparent;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
