@@ -1,6 +1,6 @@
 # Компоненты кнопки и выпадающего меню
 
-Деплой расположен на [Github](https://github.com/DmitryReztsov/button-n-dropdown.git)
+Деплой расположен на [Github](https://dmitryreztsov.github.io/button-n-dropdown/)
 
 Реализован функционал кнопки и дропдаун-меню 
 (последний в качестве примера находится среди кнопок управления)
