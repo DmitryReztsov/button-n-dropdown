@@ -6,6 +6,7 @@
 
   &__button {
     width: 100%;
+    font-weight: 500;
   }
 
   &__menu {
@@ -24,6 +25,13 @@
       padding: 0px 16px;
       min-width: 64px;
       height: 36px;
+      cursor: pointer;
+      &:hover,focus {
+        background-color: $dark-gray;
+      }
+      &:active {
+        background-color: $very-dark-gray;
+      }
     }
   }
 }
